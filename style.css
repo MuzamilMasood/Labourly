@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  background-color: white;
+  color: rgb(12, 10, 10);
+  padding: 0px;
+  text-align: center;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.body-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem 0rem 0rem 0rem;
+  background-color: #f0f0f0;
+}
+
+.footer {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+
+  .header,
+  .footer {
+    padding: 0.5rem;
+  }
+
+  .body-content {
+    padding: 0.5rem;
+  }
+}
+
+#certn {
+  height: 40px;
+  width: 120px;
+  margin-left: 40px;
+}
+
+a {
+  color: black;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+
+.o-scroll {
+  overflow-y: scroll;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #f3bb21;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Webkit-based browsers */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Change this value to adjust the scrollbar width */
+}
+
+/* Optional: Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Track background color */
+}
+
+/* Optional: Style the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Scrollbar handle color */
+  border-radius: 5px;
+  /* Optional: rounded corners */
+}
+
+/* Optional: Hover effect on scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Darker handle on hover */
+}
+.class-right-border{
+}
+.class-right-border:active {
+  cursor: pointer;
+  border-right-style: solid;
+  border-right-width: thick;
+  border-right-color: orange;
+}
